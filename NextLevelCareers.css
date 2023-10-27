@@ -109,14 +109,6 @@ h1 {
 }
 
 /****** at this size the menuMain starts to squish so changed it to a stacked list */
-@media (max-width: 723px) {
-  .menuMain ul {
-    flex-direction: column;
-  }
-  .menuMain li {
-    margin-bottom: 3px;
-  }
-}
 
 .main-navbar {
   background-color: #f2f2f2;
@@ -160,6 +152,7 @@ h1 {
 .menuMain ul {
   display: flex;
   list-style: none;
+  flex-grow: 1;
 }
 
 .menuMain li {
@@ -181,6 +174,22 @@ h1 {
   font-weight: bold;
   font-size: 16px;
   color: #004b7a;
+}
+/****** moved menuMain media queries bellow menuMain base styles because 
+cascade was preventing some from applying correctly */
+@media (max-width: 723px) {
+  .menuMain ul {
+    flex-direction: column;
+  }
+  .menuMain li {
+    margin-bottom: 3px;
+  }
+}
+
+@media (max-width: 390px) {
+  .menuMain a {
+    font-size: 13px;
+  }
 }
 
 .header {
