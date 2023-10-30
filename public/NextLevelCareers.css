@@ -1,0 +1,291 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 400%;
+}
+
+.top-navbar {
+  background-color: #004b7a;
+  color: white;
+  padding: 10px 5%;
+  display: flex;
+  justify-content: space-between;
+  position: static;
+  width: 90%;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  /* display: flex; */
+}
+.logo a {
+  text-decoration: none;
+}
+
+.logo img {
+  margin-right: 10px;
+  width: 25px;
+}
+
+.menu {
+  width: 50%;
+  /* display: flex; */
+  justify-content: space-around;
+  color: white;
+  position: relative;
+  background: #004b7a;
+  display: none;
+}
+
+.menu ul {
+  margin: 0;
+  margin-top: 1.6em;
+  padding: 0;
+  list-style: none;
+}
+.menu li {
+  text-align: right;
+  margin-bottom: 0.5em;
+  margin-left: 0.5em;
+}
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  color: #f2f2f2;
+}
+
+.menu a:hover {
+  color: #000;
+}
+
+/****** created styling for responsive dropdown that appears at 848px */
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 0.7em;
+  margin-right: 1em;
+}
+
+/****** when checkbox is checked applys this to all preceeding navs */
+/****** makes the dropdown appear and disappear */
+.nav-toggle:checked ~ nav {
+  display: block;
+}
+
+@media (min-width: 848px) {
+  nav {
+    border: 0;
+  }
+  .menu ul {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0;
+  }
+  .menu li {
+    margin-left: 20px;
+  }
+  .menu {
+    display: block;
+  }
+  .nav-toggle-label {
+    display: none;
+    top: -50px;
+    right: -50px;
+  }
+  .menuMain ul {
+    display: flex;
+    justify-content: flex-end; /* Move the menu items to the right */
+  }
+}
+
+/****** at this size the menuMain starts to squish so changed it to a stacked list */
+
+.main-navbar {
+  background-color: #f2f2f2;
+  color: black;
+  padding: 10px 5%;
+  display: flex;
+  justify-content: space-between;
+  position: static;
+  width: 90%;
+  height: 80px;
+  z-index: 1000;
+}
+
+.overlay {
+  background-color: rgba(0, 75, 122, 0.5);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.mainLogo {
+  display: flex;
+  align-items: center;
+}
+
+.mainLogo img {
+  height: 60px;
+  width: auto;
+}
+
+.menuMain {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/****** changed to ul with diplay flex  */
+.menuMain ul {
+  display: flex;
+  list-style: none;
+  flex-grow: 1;
+}
+
+.menuMain li {
+  margin-left: 30px;
+}
+
+.menuMain a:hover {
+  color: #000;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuMain a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  color: #004b7a;
+}
+/****** moved menuMain media queries bellow menuMain base styles because 
+cascade was preventing some from applying correctly */
+@media (max-width: 723px) {
+  .menuMain ul {
+    flex-direction: column;
+  }
+  .menuMain li {
+    margin-bottom: 3px;
+  }
+}
+
+@media (max-width: 390px) {
+  .menuMain a {
+    font-size: 13px;
+  }
+}
+
+.header {
+  background: url("https://previews.123rf.com/images/chagin/chagin1305/chagin130500400/19729949-happy-business-people-in-a-meeting-at-office.jpg")
+    center/cover no-repeat;
+  height: 400px;
+  position: relative;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  background-color: rgba(0, 75, 122, 0.5);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.header-content {
+  z-index: 1;
+  padding: 50px;
+  margin: 50px;
+}
+
+/***** changed margins to % so they shrink better */
+.content {
+  background-color: #f2f2f2;
+  padding: 3.5%;
+  margin: 3.5%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.content img {
+  width: 100px;
+  height: 100px;
+  max-width: 100%; /* Ensure the image doesn't exceed its container */
+  /* margin-right: 20px;  */
+  /* Adjust the spacing between image and text */
+}
+
+.content-text {
+  flex: 1;
+  margin-left: 20px; /* Allow the text to take remaining space */
+}
+
+.content h2 {
+  color: #004b7a;
+}
+
+.content p {
+  font-size: 18px;
+  color: #230007;
+}
+
+.testimonial-carousel {
+  background-color: white;
+  padding: 50px;
+  margin: 50px;
+  text-align: left;
+  overflow: hidden;
+  border: 3px #e6e6e6 solid;
+  text-align: center;
+  box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+.testimonials-content {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%; /* Ensure the content takes full width */
+}
+
+.testimonial {
+  flex: 0 0 100%; /* Each testimonial takes full width */
+  color: #004b7a;
+  padding: 0 20px; /* Adjust padding as needed */
+  white-space: normal;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+@media (max-width: 860px) {
+  .content {
+    flex-direction: column;
+    /* Stack elements in a column */
+  }
+  .content-text {
+    margin-left: 0px;
+  }
+}

@@ -1,0 +1,214 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 400%;
+}
+
+.top-navbar {
+  background-color: #004b7a;
+  color: white;
+  padding: 10px 5%;
+  display: flex;
+  justify-content: space-between;
+  position: static;
+  width: 90%;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  margin-right: 10px;
+}
+
+.menu {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+}
+
+.main-navbar {
+  background-color: #f2f2f2;
+  color: black;
+  padding: 10px 5%;
+  display: flex;
+  justify-content: space-between;
+  position: static;
+  width: 90%;
+  height: 80px;
+  z-index: 1000;
+}
+
+.overlay {
+  background-color: rgba(0, 75, 122, 0.5);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.mainLogo {
+  display: flex;
+  align-items: center;
+}
+
+.mainLogo img {
+  height: 60px;
+  width: auto;
+}
+
+.menuMain {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  color: #f2f2f2;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuMain a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  color: #004b7a;
+}
+
+.header {
+  background: url("https://previews.123rf.com/images/chagin/chagin1305/chagin130500400/19729949-happy-business-people-in-a-meeting-at-office.jpg")
+    center/cover no-repeat;
+  height: 400px;
+  position: relative;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  background-color: rgba(0, 75, 122, 0.5);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.header-content {
+  z-index: 1;
+  padding: 50px;
+  margin: 50px;
+}
+
+.content {
+  background-color: #f2f2f2;
+  padding: 50px;
+  margin: 50px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.content img {
+  max-width: 100%; /* Ensure the image doesn't exceed its container */
+  margin-right: 20px; /* Adjust the spacing between image and text */
+}
+
+.content-text {
+  flex: 1; /* Allow the text to take remaining space */
+}
+
+.content h2 {
+  color: #004b7a;
+}
+
+.content p {
+  font-size: 18px;
+  color: #230007;
+}
+
+.content2 {
+  background-color: #004b7a;
+  padding: 50px;
+  margin: 50px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.content2 img {
+  max-width: 100%;
+  margin-left: 20px;
+}
+
+.content2-text {
+  flex: 1;
+}
+
+.content2 h2 {
+  color: #886f68;
+}
+
+.content2 p {
+  font-size: 18px;
+  color: #e6e6e6;
+}
+
+.testimonial-carousel {
+  background-color: white;
+  padding: 50px;
+  margin: 50px;
+  text-align: left;
+  overflow: hidden;
+  border: 3px #e6e6e6 solid;
+  text-align: center;
+  box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+.testimonials-content {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%; /* Ensure the content takes full width */
+}
+
+.testimonial {
+  flex: 0 0 100%; /* Each testimonial takes full width */
+  color: #004b7a;
+  padding: 0 20px; /* Adjust padding as needed */
+  white-space: normal;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+@media (max-width: 860px) {
+  .content {
+    flex-direction: column; /* Stack elements in a column */
+  }
+}
+@media (max-width: 860px) {
+  .content2 {
+    flex-direction: column; /* Stack elements in a column */
+  }
+}

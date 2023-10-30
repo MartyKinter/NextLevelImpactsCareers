@@ -1,0 +1,11 @@
+{% extends 'base.html' %} {% block css %}<link
+  rel="stylesheet"
+  href="NextLevelCareers.css"
+/>{% endblock %} {% block title %}Error{% endblock %} {% block heading %}Error{%
+endblock %}{% block content %}
+
+<h1>Error {{ err.status }}</h1>
+
+<p>{{ err.message }}</p>
+
+{% endblock %}
