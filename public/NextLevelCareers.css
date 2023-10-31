@@ -1,3 +1,4 @@
+/*==================== BASE ====================*/
 body {
   margin: 0;
   padding: 0;
@@ -8,6 +9,7 @@ h1 {
   font-size: 400%;
 }
 
+/*==================== TOP MENU ====================*/
 .top-navbar {
   background-color: #004b7a;
   color: white;
@@ -24,6 +26,7 @@ h1 {
   font-weight: bold;
   /* display: flex; */
 }
+
 .logo a {
   text-decoration: none;
 }
@@ -49,11 +52,13 @@ h1 {
   padding: 0;
   list-style: none;
 }
+
 .menu li {
   text-align: right;
   margin-bottom: 0.5em;
   margin-left: 0.5em;
 }
+
 .menu a {
   color: white;
   text-decoration: none;
@@ -113,6 +118,7 @@ h1 {
 
 /****** at this size the menuMain starts to squish so changed it to a stacked list */
 
+/*==================== MENU MAIN ====================*/
 .main-navbar {
   background-color: #f2f2f2;
   color: black;
@@ -123,15 +129,6 @@ h1 {
   width: 90%;
   height: 80px;
   z-index: 1000;
-}
-
-.overlay {
-  background-color: rgba(0, 75, 122, 0.5);
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
 }
 
 .mainLogo {
@@ -195,6 +192,7 @@ cascade was preventing some from applying correctly */
   }
 }
 
+/*==================== HEADER ====================*/
 .header {
   background: url("https://previews.123rf.com/images/chagin/chagin1305/chagin130500400/19729949-happy-business-people-in-a-meeting-at-office.jpg")
     center/cover no-repeat;
@@ -223,6 +221,7 @@ cascade was preventing some from applying correctly */
   margin: 50px;
 }
 
+/*==================== CONTENT ====================*/
 /***** changed margins to % so they shrink better */
 .content {
   background-color: #f2f2f2;
@@ -233,9 +232,12 @@ cascade was preventing some from applying correctly */
   align-items: center;
 }
 
-.content img {
+.career-img {
   width: 100px;
   height: 100px;
+}
+
+.content img {
   max-width: 100%; /* Ensure the image doesn't exceed its container */
   /* margin-right: 20px;  */
   /* Adjust the spacing between image and text */
@@ -255,6 +257,51 @@ cascade was preventing some from applying correctly */
   color: #230007;
 }
 
+.content2 {
+  background-color: #004b7a;
+  padding: 50px;
+  margin: 50px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.content2 img {
+  max-width: 100%;
+  margin-left: 20px;
+}
+
+.content2-text {
+  flex: 1;
+}
+
+.content2 h2 {
+  color: #886f68;
+}
+
+.content2 p {
+  font-size: 18px;
+  color: #e6e6e6;
+}
+
+@media (max-width: 860px) {
+  .content {
+    flex-direction: column;
+    /* Stack elements in a column */
+  }
+  .content-text {
+    margin-left: 0px;
+  }
+  .content2 {
+    flex-direction: column;
+    /* Stack elements in a column */
+  }
+  .content-text {
+    margin-right: 0px;
+  }
+}
+
+/*==================== TESTIMONIAL ====================*/
 .testimonial-carousel {
   background-color: white;
   padding: 50px;
@@ -279,13 +326,4 @@ cascade was preventing some from applying correctly */
   white-space: normal;
   overflow: hidden;
   word-wrap: break-word;
-}
-@media (max-width: 860px) {
-  .content {
-    flex-direction: column;
-    /* Stack elements in a column */
-  }
-  .content-text {
-    margin-left: 0px;
-  }
 }
