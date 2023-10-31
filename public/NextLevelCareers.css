@@ -228,10 +228,14 @@ cascade was preventing some from applying correctly */
   margin: 3.5%;
   text-align: left;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* justify-content: space-between; */
   align-items: center;
 }
 
 .content img {
+  margin: .5rem 2rem;
   max-width: 100%; /* Ensure the image doesn't exceed its container */
   /* margin-right: 20px;  */
   /* Adjust the spacing between image and text */
@@ -281,7 +285,7 @@ cascade was preventing some from applying correctly */
 
 @media (max-width: 860px) {
   .content {
-    flex-direction: column;
+    /* flex-direction: column; */
     /* Stack elements in a column */
   }
   .content-text {
@@ -325,8 +329,8 @@ cascade was preventing some from applying correctly */
 
 /*==================== CAREERS ====================*/
 .career-img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
 }
 
 /*==================== TEAM ====================*/
