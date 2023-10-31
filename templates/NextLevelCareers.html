@@ -1,11 +1,25 @@
-{% extends 'base.html' %} {% block css%}<link
-  rel="stylesheet"
-  href="NextLevelCareers.css"
-/>{% endblock %} {% block title%}Careers{% endblock %} {% block
-heading%}Careers{% endblock %} {% block content %}
+{% extends 'base.html' %} 
+
+{% block css%}<link rel="stylesheet" href="NextLevelCareers.css"/>{% endblock %} 
+
+{% block title%}Careers{% endblock %} 
+
+{% block heading%}Careers{% endblock %} 
+
+{% block content %} 
+
+{% for career in careers %}
+<div class="content">
+  <img class="career-img" src="{{career.img}}" alt="Image Description" />
+  <div class="content-text">
+    <h2>{{career.heading}}</h2>
+    <p>{{career.description}}</p>
+  </div>
+</div>
+{% endfor %}
 
 <!--Content 1-->
-<div class="content">
+<!-- <div class="content">
   <img
     class="career-img"
     src="https://t3.ftcdn.net/jpg/04/40/29/94/360_F_440299419_s4b12RfNDJvpplheVDmKdhFGJiHlAYNs.jpg"
@@ -22,10 +36,10 @@ heading%}Careers{% endblock %} {% block content %}
       orci a scelerisque purus.
     </p>
   </div>
-</div>
+</div> -->
 
 <!--Content 2-->
-<div class="content">
+<!-- <div class="content">
   <img
     class="career-img"
     src="https://t3.ftcdn.net/jpg/04/40/29/94/360_F_440299419_s4b12RfNDJvpplheVDmKdhFGJiHlAYNs.jpg"
@@ -42,10 +56,10 @@ heading%}Careers{% endblock %} {% block content %}
       orci a scelerisque purus.
     </p>
   </div>
-</div>
+</div> -->
 
 <!--Content 3-->
-<div class="content">
+<!-- <div class="content">
   <img
     class="career-img"
     src="https://t3.ftcdn.net/jpg/04/40/29/94/360_F_440299419_s4b12RfNDJvpplheVDmKdhFGJiHlAYNs.jpg"
@@ -62,10 +76,10 @@ heading%}Careers{% endblock %} {% block content %}
       orci a scelerisque purus.
     </p>
   </div>
-</div>
+</div> -->
 
 <!--Content 4-->
-<div class="content">
+<!-- <div class="content">
   <img
     class="career-img"
     src="https://t3.ftcdn.net/jpg/04/40/29/94/360_F_440299419_s4b12RfNDJvpplheVDmKdhFGJiHlAYNs.jpg"
@@ -82,10 +96,10 @@ heading%}Careers{% endblock %} {% block content %}
       orci a scelerisque purus.
     </p>
   </div>
-</div>
+</div> -->
 
 <!--Content 5-->
-<div class="content">
+<!-- <div class="content">
   <img
     class="career-img"
     src="https://t3.ftcdn.net/jpg/04/40/29/94/360_F_440299419_s4b12RfNDJvpplheVDmKdhFGJiHlAYNs.jpg"
@@ -102,5 +116,5 @@ heading%}Careers{% endblock %} {% block content %}
       orci a scelerisque purus.
     </p>
   </div>
-</div>
+</div> -->
 {% endblock %}

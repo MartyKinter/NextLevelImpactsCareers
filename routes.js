@@ -1,4 +1,5 @@
 const express = require("express");
+const { careers } = require("./careerList")
 
 const router = new express.Router();
 
@@ -12,7 +13,7 @@ router.get("/", async function (req, res, next) {
 
 router.get("/careers", async function (req, res, next) {
   try {
-    return res.render("NextLevelCareers.html");
+    return res.render("NextLevelCareers.html", {careers});
   } catch (err) {
     return err;
   }
