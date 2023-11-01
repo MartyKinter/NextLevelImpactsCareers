@@ -86,7 +86,7 @@ h1 {
 
 /****** when checkbox is checked applys this to all preceeding navs */
 /****** makes the dropdown appear and disappear */
-.nav-toggle:checked ~ nav {
+.nav-toggle:checked~nav {
   display: block;
 }
 
@@ -94,25 +94,31 @@ h1 {
   nav {
     border: 0;
   }
+
   .menu ul {
     display: flex;
     justify-content: flex-end;
     margin-top: 0;
   }
+
   .menu li {
     margin-left: 20px;
   }
+
   .menu {
     display: block;
   }
+
   .nav-toggle-label {
     display: none;
     top: -50px;
     right: -50px;
   }
+
   .menuMain ul {
     display: flex;
-    justify-content: flex-end; /* Move the menu items to the right */
+    justify-content: flex-end;
+    /* Move the menu items to the right */
   }
 }
 
@@ -173,6 +179,7 @@ h1 {
   font-size: 16px;
   color: #004b7a;
 }
+
 /****** at this size the menuMain starts to squish so changed it to a stacked list */
 /****** moved menuMain media queries bellow menuMain base styles because 
 cascade was preventing some from applying correctly */
@@ -180,6 +187,7 @@ cascade was preventing some from applying correctly */
   .menuMain ul {
     flex-direction: column;
   }
+
   .menuMain li {
     margin-bottom: 3px;
   }
@@ -193,8 +201,7 @@ cascade was preventing some from applying correctly */
 
 /*==================== HEADER ====================*/
 .header {
-  background: url("https://previews.123rf.com/images/chagin/chagin1305/chagin130500400/19729949-happy-business-people-in-a-meeting-at-office.jpg")
-    center/cover no-repeat;
+  background: url("https://previews.123rf.com/images/chagin/chagin1305/chagin130500400/19729949-happy-business-people-in-a-meeting-at-office.jpg") center/cover no-repeat;
   height: 400px;
   position: relative;
   color: white;
@@ -235,15 +242,16 @@ cascade was preventing some from applying correctly */
 }
 
 .content img {
-  margin: .5rem 2rem;
-  max-width: 100%; /* Ensure the image doesn't exceed its container */
+  max-width: 100%;
+  /* Ensure the image doesn't exceed its container */
   /* margin-right: 20px;  */
   /* Adjust the spacing between image and text */
 }
 
 .content-text {
   flex: 1;
-  margin-left: 20px; /* Allow the text to take remaining space */
+  margin-left: 20px;
+  /* Allow the text to take remaining space */
 }
 
 .content h2 {
@@ -288,13 +296,16 @@ cascade was preventing some from applying correctly */
     /* flex-direction: column; */
     /* Stack elements in a column */
   }
+
   .content-text {
     margin-left: 0px;
   }
+
   .content2 {
     flex-direction: column;
     /* Stack elements in a column */
   }
+
   .content2-text {
     margin-right: 0px;
   }
@@ -309,19 +320,23 @@ cascade was preventing some from applying correctly */
   overflow: hidden;
   border: 3px #e6e6e6 solid;
   text-align: center;
-  box-sizing: border-box; /* Include padding and border in the element's total width */
+  box-sizing: border-box;
+  /* Include padding and border in the element's total width */
 }
 
 .testimonials-content {
   display: flex;
   transition: transform 0.5s ease;
-  width: 100%; /* Ensure the content takes full width */
+  width: 100%;
+  /* Ensure the content takes full width */
 }
 
 .testimonial {
-  flex: 0 0 100%; /* Each testimonial takes full width */
+  flex: 0 0 100%;
+  /* Each testimonial takes full width */
   color: #004b7a;
-  padding: 0 20px; /* Adjust padding as needed */
+  padding: 0 20px;
+  /* Adjust padding as needed */
   white-space: normal;
   overflow: hidden;
   word-wrap: break-word;
@@ -331,6 +346,18 @@ cascade was preventing some from applying correctly */
 .career-img {
   width: 150px;
   height: 150px;
+}
+
+.image-container-career {
+  position: relative;
+  display: inline-block;
+  margin: 1rem 2rem;
+  /* Ensures the container only takes as much space as the image */
+}
+
+.image-container-career:hover .overlay {
+  opacity: 1;
+  /* When hovering over the image container, the overlay becomes visible */
 }
 
 /*==================== TEAM ====================*/
@@ -366,12 +393,12 @@ cascade was preventing some from applying correctly */
   transition: 0.3s;
   /* Smooth transition for the overlay effect */
 }
-      
+
 .image-container:hover .overlay {
   opacity: 1;
   /* When hovering over the image container, the overlay becomes visible */
 }
-      
+
 /* Additional styles for the overlay text */
 .overlay-text {
   text-align: center;

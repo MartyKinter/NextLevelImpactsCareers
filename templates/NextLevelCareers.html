@@ -1,20 +1,66 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 
-{% block css%}<link rel="stylesheet" href="NextLevelCareers.css"/>{% endblock %} 
+{% block css%}
+<link rel="stylesheet" href="NextLevelCareers.css" />{% endblock %}
 
-{% block title%}Careers{% endblock %} 
+{% block title%}Careers{% endblock %}
 
-{% block heading%}Careers{% endblock %} 
+{% block heading%}Careers{% endblock %}
 
-{% block content %} 
+{% block content %}
 
 {% for career in careers %}
 <div class="content">
-  <a href="/"><img class="career-img" src={{career.img}} alt="Image Description" /></a>
-  <a href="/"><img class="career-img" src={{career.img}} alt="Image Description" /></a>
-  <a href="/"><img class="career-img" src={{career.img}} alt="Image Description" /></a>
-  <a href="/"><img class="career-img" src={{career.img}} alt="Image Description" /></a>
-  <a href="/"><img class="career-img" src={{career.img}} alt="Image Description" /></a>
+  <div class="image-container-career">
+    <a href="/"><img class="career-img" src={{career.img}} alt="Image Description" /></a>
+    <div class="overlay">
+      <div class="overlay-text">
+        <a href="https://www.linkedin.com/in/keith-roher-3313456/" target="_blank">
+          lorem
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="image-container-career">
+    <a href="/"><img class="career-img" src={{career.img}} alt="Image Description" /></a>
+    <div class="overlay">
+      <div class="overlay-text">
+        <a href="https://www.linkedin.com/in/keith-roher-3313456/" target="_blank">
+          lorem
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="image-container-career">
+    <a href="/"><img class="career-img" src={{career.img}} alt="Image Description" /></a>
+    <div class="overlay">
+      <div class="overlay-text">
+        <a href="https://www.linkedin.com/in/keith-roher-3313456/" target="_blank">
+          lorem
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="image-container-career">
+    <a href="/"><img class="career-img" src={{career.img}} alt="Image Description" /></a>
+    <div class="overlay">
+      <div class="overlay-text">
+        <a href="https://www.linkedin.com/in/keith-roher-3313456/" target="_blank">
+          lorem
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="image-container-career">
+    <a href="/"><img class="career-img" src={{career.img}} alt="Image Description" /></a>
+    <div class="overlay">
+      <div class="overlay-text">
+        <a href="https://www.linkedin.com/in/keith-roher-3313456/" target="_blank">
+          lorem
+        </a>
+      </div>
+    </div>
+  </div>
   <!-- <div class="content-text">
     <h2>{{career.heading}}</h2>
     <p>{{career.description}}</p>

@@ -1,4 +1,4 @@
-To get started run
+To get started
 
 In the project directory, you can run:
 
