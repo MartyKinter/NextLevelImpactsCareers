@@ -1,90 +1,357 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block css%}
-<link rel="stylesheet" href="NextLevelCareers.css" />{% endblock %}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+  <!-- <link rel="stylesheet" href="NextLevelCareers.css" /> -->
+  <link rel="stylesheet" href="NextLevelCareers.css" />
+  <title>Careers</title>
+</head>
 
-{% block title%}Careers{% endblock %}
+<body>
+  <header class="top-navbar">
+    <div class="logo">
+      <!-- changed social media icons to devicons to see how the look -->
+      <a href="https://www.facebook.com/NextLevelImpacts" target="_blank">
+        <img src="https://i.imgur.com/rHJit0V.png" width="25" height="25" alt="Facebook Icon" />
+      </a>
+      <a href="https://www.linkedin.com/company/next-level-impacts/" target="_blank">
+        <img src="https://i.imgur.com/tvDlPAG.png" width="25" height="25" alt="LinkedIn Icon" />
+      </a>
+    </div>
 
-{% block heading%}Careers{% endblock %}
+    <!-- changed links to nav with a list to create responsive dropdown -->
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span></span>
+    </label>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <nav class="menu">
+      <ul>
+        <li><a href="/candidates">For Candidates</a></li>
+        <li><a href="/employers">For Employers</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/careers">Careers</a></li>
+      </ul>
+    </nav>
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0,0,256,256">
+          <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+            font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+            <g transform="scale(5.12,5.12)">
+              <path
+                d="M5,8c-0.72127,-0.0102 -1.39216,0.36875 -1.75578,0.99175c-0.36361,0.623 -0.36361,1.39351 0,2.01651c0.36361,0.623 1.0345,1.00195 1.75578,0.99175h40c0.72127,0.0102 1.39216,-0.36875 1.75578,-0.99175c0.36361,-0.623 0.36361,-1.39351 0,-2.01651c-0.36361,-0.623 -1.0345,-1.00195 -1.75578,-0.99175zM5,23c-0.72127,-0.0102 -1.39216,0.36875 -1.75578,0.99175c-0.36361,0.623 -0.36361,1.39351 0,2.01651c0.36361,0.623 1.0345,1.00195 1.75578,0.99175h40c0.72127,0.0102 1.39216,-0.36875 1.75578,-0.99175c0.36361,-0.623 0.36361,-1.39351 0,-2.01651c-0.36361,-0.623 -1.0345,-1.00195 -1.75578,-0.99175zM5,38c-0.72127,-0.0102 -1.39216,0.36875 -1.75578,0.99175c-0.36361,0.623 -0.36361,1.39351 0,2.01651c0.36361,0.623 1.0345,1.00195 1.75578,0.99175h40c0.72127,0.0102 1.39216,-0.36875 1.75578,-0.99175c0.36361,-0.623 0.36361,-1.39351 0,-2.01651c-0.36361,-0.623 -1.0345,-1.00195 -1.75578,-0.99175z">
+              </path>
+            </g>
+          </g>
+        </svg>
+      </span>
+    </label>
+  </header>
 
-{% block content %}
+  <div class="main-navbar">
+    <div class="mainLogo">
+      <a href="/">
+        <img src="https://www.nextlevelimpacts.com/wp-content/uploads/2021/03/next-level-logo.png"
+          alt="Next Level Impacts Logo" /></a>
+    </div>
+    <!-- changed to nav with ul for easier responsiveness  -->
+    <nav class="menuMain">
+      <ul>
+        <li><a href="/why">Why Next Level Impacts</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </nav>
+  </div>
 
-{% for career in careers %}
-<div class="content">
-  <div class="image-container-career">
-    <a href="/"><img class="career-img" src={{career.img}} alt="Image Description" /></a>
-    <div class="overlay">
-      <div class="overlay-text">
-        <a href="https://www.linkedin.com/in/keith-roher-3313456/" target="_blank">
-          lorem
-        </a>
+  <div class="header">
+    <div class="overlayHeader"></div>
+    <div class="header-content">
+      <h1 class="header-title">Careers</h1>
+      <p>
+        . Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+        culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <a href="https://www.nextlevelimpacts.com/wp-content/plugins/bullhorn-oscp/#/" class="rounded-button">View Job
+        Postings</a>
+    </div>
+  </div>
+
+
+  <div class="content">
+    <a href="/diagnostics">
+      <h2 class="industry-headings">Diagnostics</h2>
+    </a>
+
+    <div class="content-images">
+      <div class="image-container-career">
+        <a href="/"><img class="career-img"
+            src="https://t3.ftcdn.net/jpg/04/40/29/94/360_F_440299419_s4b12RfNDJvpplheVDmKdhFGJiHlAYNs.jpg"
+            alt="Image Description" /></a>
+        <div class="overlay">
+          <div class="overlay-text">
+            <a class="text" href="/diagnostics/women">
+              Women's Health
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="image-container-career">
+        <a href="/"><img class="career-img"
+            src="https://t3.ftcdn.net/jpg/04/40/29/94/360_F_440299419_s4b12RfNDJvpplheVDmKdhFGJiHlAYNs.jpg"
+            alt="Image Description" /></a>
+        <div class="overlay">
+          <div class="overlay-text">
+            <a class="text" href="/diagnostics/genetics">
+              Genetics
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="image-container-career">
+        <a href="/"><img class="career-img"
+            src="https://t3.ftcdn.net/jpg/04/40/29/94/360_F_440299419_s4b12RfNDJvpplheVDmKdhFGJiHlAYNs.jpg"
+            alt="Image Description" /></a>
+        <div class="overlay">
+          <div class="overlay-text">
+            <a class="text" href="/diagnostics/oncology">
+              Oncology
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="image-container-career">
+        <a href="/"><img class="career-img"
+            src="https://t3.ftcdn.net/jpg/04/40/29/94/360_F_440299419_s4b12RfNDJvpplheVDmKdhFGJiHlAYNs.jpg"
+            alt="Image Description" /></a>
+        <div class="overlay">
+          <div class="overlay-text">
+            <a class="text" href="/diagnostics/autoimmune">
+              Autoimmune
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="image-container-career">
+        <a href="/"><img class="career-img"
+            src="https://t3.ftcdn.net/jpg/04/40/29/94/360_F_440299419_s4b12RfNDJvpplheVDmKdhFGJiHlAYNs.jpg"
+            alt="Image Description" /></a>
+        <div class="overlay">
+          <div class="overlay-text">
+            <a class="text" href="/diagnostics/bioinformatics">
+              Bioinformatics
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="image-container-career">
-    <a href="/"><img class="career-img" src={{career.img}} alt="Image Description" /></a>
-    <div class="overlay">
-      <div class="overlay-text">
-        <a href="https://www.linkedin.com/in/keith-roher-3313456/" target="_blank">
-          lorem
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="image-container-career">
-    <a href="/"><img class="career-img" src={{career.img}} alt="Image Description" /></a>
-    <div class="overlay">
-      <div class="overlay-text">
-        <a href="https://www.linkedin.com/in/keith-roher-3313456/" target="_blank">
-          lorem
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="image-container-career">
-    <a href="/"><img class="career-img" src={{career.img}} alt="Image Description" /></a>
-    <div class="overlay">
-      <div class="overlay-text">
-        <a href="https://www.linkedin.com/in/keith-roher-3313456/" target="_blank">
-          lorem
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="image-container-career">
-    <a href="/"><img class="career-img" src={{career.img}} alt="Image Description" /></a>
-    <div class="overlay">
-      <div class="overlay-text">
-        <a href="https://www.linkedin.com/in/keith-roher-3313456/" target="_blank">
-          lorem
-        </a>
-      </div>
-    </div>
-  </div>
-  <!-- <div class="content-text">
-    <h2>{{career.heading}}</h2>
-    <p>{{career.description}}</p>
-  </div> -->
-</div>
-{% endfor %}
 
-<!--Content 1-->
-<!-- <div class="content">
-  <img
-    class="career-img"
-    src="https://t3.ftcdn.net/jpg/04/40/29/94/360_F_440299419_s4b12RfNDJvpplheVDmKdhFGJiHlAYNs.jpg"
-    alt="Image Description"
-  />
-  <div class="content-text">
-    <h2>Heading</h2>
-    <p>
-      Ut sem viverra aliquet eget sit. Sit amet cursus sit amet dictum. Egestas
-      sed sed risus pretium quam vulputate dignissim suspendisse in. Aenean et
-      tortor at risus viverra adipiscing at. Quis viverra nibh cras pulvinar
-      mattis nunc sed blandit libero. Duis ultricies lacus sed turpis tincidunt
-      id aliquet risus. Nulla posuere sollicitudin aliquam ultrices sagittis
-      orci a scelerisque purus.
-    </p>
+  <div class="content">
+    <h2 class="industry-headings">Medical Devices</h2>
+    <div class="content-images">
+      <div class="image-container-career">
+        <a href="/"><img class="career-img"
+            src="https://t3.ftcdn.net/jpg/04/40/29/94/360_F_440299419_s4b12RfNDJvpplheVDmKdhFGJiHlAYNs.jpg"
+            alt="Image Description" /></a>
+        <div class="overlay">
+          <div class="overlay-text">
+            <a class="text" href="https://www.nextlevelimpacts.com/wp-content/plugins/bullhorn-oscp/#/" target="_blank">
+              Vascular
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="image-container-career">
+        <a href="/"><img class="career-img"
+            src="https://t3.ftcdn.net/jpg/04/40/29/94/360_F_440299419_s4b12RfNDJvpplheVDmKdhFGJiHlAYNs.jpg"
+            alt="Image Description" /></a>
+        <div class="overlay">
+          <div class="overlay-text">
+            <a class="text" href="https://www.nextlevelimpacts.com/wp-content/plugins/bullhorn-oscp/#/" target="_blank">
+              Cardiac
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="image-container-career">
+        <a href="/"><img class="career-img"
+            src="https://t3.ftcdn.net/jpg/04/40/29/94/360_F_440299419_s4b12RfNDJvpplheVDmKdhFGJiHlAYNs.jpg"
+            alt="Image Description" /></a>
+        <div class="overlay">
+          <div class="overlay-text">
+            <a class="text" href="https://www.nextlevelimpacts.com/wp-content/plugins/bullhorn-oscp/#/" target="_blank">
+              Spine
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="image-container-career">
+        <a href="/"><img class="career-img"
+            src="https://t3.ftcdn.net/jpg/04/40/29/94/360_F_440299419_s4b12RfNDJvpplheVDmKdhFGJiHlAYNs.jpg"
+            alt="Image Description" /></a>
+        <div class="overlay">
+          <div class="overlay-text">
+            <a class="text" href="https://www.nextlevelimpacts.com/wp-content/plugins/bullhorn-oscp/#/" target="_blank">
+              CMF
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="image-container-career">
+        <a href="/"><img class="career-img"
+            src="https://t3.ftcdn.net/jpg/04/40/29/94/360_F_440299419_s4b12RfNDJvpplheVDmKdhFGJiHlAYNs.jpg"
+            alt="Image Description" /></a>
+        <div class="overlay">
+          <div class="overlay-text">
+            <a class="text" href="/" target="_blank">
+              Orthopedic
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div> -->
-{% endblock %}
+
+  <div class="content">
+    <h2 class="industry-headings">Pharmaceutical Industry</h2>
+    <div class="content-images">
+      <div class="image-container-career">
+        <a href="/"><img class="career-img"
+            src="https://t3.ftcdn.net/jpg/04/40/29/94/360_F_440299419_s4b12RfNDJvpplheVDmKdhFGJiHlAYNs.jpg"
+            alt="Image Description" /></a>
+        <div class="overlay">
+          <div class="overlay-text">
+            <a class="text" href="https://www.nextlevelimpacts.com/wp-content/plugins/bullhorn-oscp/#/" target="_blank">
+              Oncology
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="image-container-career">
+        <a href="/"><img class="career-img"
+            src="https://t3.ftcdn.net/jpg/04/40/29/94/360_F_440299419_s4b12RfNDJvpplheVDmKdhFGJiHlAYNs.jpg"
+            alt="Image Description" /></a>
+        <div class="overlay">
+          <div class="overlay-text">
+            <a class="text" href="https://www.nextlevelimpacts.com/wp-content/plugins/bullhorn-oscp/#/" target="_blank">
+              Women's Health
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="image-container-career">
+        <a href="/"><img class="career-img"
+            src="https://t3.ftcdn.net/jpg/04/40/29/94/360_F_440299419_s4b12RfNDJvpplheVDmKdhFGJiHlAYNs.jpg"
+            alt="Image Description" /></a>
+        <div class="overlay">
+          <div class="overlay-text">
+            <a class="text" href="https://www.nextlevelimpacts.com/wp-content/plugins/bullhorn-oscp/#/" target="_blank">
+              Urology
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="image-container-career">
+        <a href="/"><img class="career-img"
+            src="https://t3.ftcdn.net/jpg/04/40/29/94/360_F_440299419_s4b12RfNDJvpplheVDmKdhFGJiHlAYNs.jpg"
+            alt="Image Description" /></a>
+        <div class="overlay">
+          <div class="overlay-text">
+            <a class="text" href="https://www.nextlevelimpacts.com/wp-content/plugins/bullhorn-oscp/#/" target="_blank">
+              Psychiatry
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="image-container-career">
+        <a href="/"><img class="career-img"
+            src="https://t3.ftcdn.net/jpg/04/40/29/94/360_F_440299419_s4b12RfNDJvpplheVDmKdhFGJiHlAYNs.jpg"
+            alt="Image Description" /></a>
+        <div class="overlay">
+          <div class="overlay-text">
+            <a class="text" href="/" target="_blank">
+              Ophthamology
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <h2 class="industry-headings">Precision Medicine</h2>
+    <div class="content-images">
+      <div class="image-container-career">
+        <a href="/"><img class="career-img"
+            src="https://t3.ftcdn.net/jpg/04/40/29/94/360_F_440299419_s4b12RfNDJvpplheVDmKdhFGJiHlAYNs.jpg"
+            alt="Image Description" /></a>
+        <div class="overlay">
+          <div class="overlay-text">
+            <a class="text" href="https://www.nextlevelimpacts.com/wp-content/plugins/bullhorn-oscp/#/" target="_blank">
+              Oncology
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="image-container-career">
+        <a href="/"><img class="career-img"
+            src="https://t3.ftcdn.net/jpg/04/40/29/94/360_F_440299419_s4b12RfNDJvpplheVDmKdhFGJiHlAYNs.jpg"
+            alt="Image Description" /></a>
+        <div class="overlay">
+          <div class="overlay-text">
+            <a class="text" href="https://www.nextlevelimpacts.com/wp-content/plugins/bullhorn-oscp/#/" target="_blank">
+              Women's health
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="image-container-career">
+        <a href="/"><img class="career-img"
+            src="https://t3.ftcdn.net/jpg/04/40/29/94/360_F_440299419_s4b12RfNDJvpplheVDmKdhFGJiHlAYNs.jpg"
+            alt="Image Description" /></a>
+        <div class="overlay">
+          <div class="overlay-text">
+            <a class="text" href="https://www.nextlevelimpacts.com/wp-content/plugins/bullhorn-oscp/#/" target="_blank">
+              Urology
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="image-container-career">
+        <a href="/"><img class="career-img"
+            src="https://t3.ftcdn.net/jpg/04/40/29/94/360_F_440299419_s4b12RfNDJvpplheVDmKdhFGJiHlAYNs.jpg"
+            alt="Image Description" /></a>
+        <div class="overlay">
+          <div class="overlay-text">
+            <a class="text" href="https://www.nextlevelimpacts.com/wp-content/plugins/bullhorn-oscp/#/" target="_blank">
+              Psychiatry
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="image-container-career">
+        <a href="/"><img class="career-img"
+            src="https://t3.ftcdn.net/jpg/04/40/29/94/360_F_440299419_s4b12RfNDJvpplheVDmKdhFGJiHlAYNs.jpg"
+            alt="Image Description" /></a>
+        <div class="overlay">
+          <div class="overlay-text">
+            <a class="text" href="/" target="_blank">
+              Opthalmology
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -223,8 +223,26 @@ cascade was preventing some from applying correctly */
 
 .header-content {
   z-index: 1;
-  padding: 50px;
-  margin: 50px;
+  padding: 3.5%;
+  margin: 3.5%;
+}
+
+.rounded-button {
+  display: inline-block;
+  margin-top: 10px;
+  /* Adjust the top margin as needed to create space between text and button */
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid #f2f2f2;
+  color: #f2f2f2;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.rounded-button:hover {
+  background-color: #f2f2f2;
+  color: #000;
 }
 
 /*==================== CONTENT ====================*/
@@ -235,13 +253,23 @@ cascade was preventing some from applying correctly */
   margin: 3.5%;
   text-align: left;
   display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+}
+
+.industry-headings {
+  margin-left: 3.5%;
+}
+
+.content-images {
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* justify-content: space-between; */
   align-items: center;
 }
 
 .content img {
+  flex-direction: row;
   max-width: 100%;
   /* Ensure the image doesn't exceed its container */
   /* margin-right: 20px;  */
@@ -405,4 +433,9 @@ cascade was preventing some from applying correctly */
   font-size: 18px;
   font-weight: bold;
   padding: 20px;
+  color: white;
+}
+
+.text {
+  color: white;
 }

@@ -11,6 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 nunjucks.configure("templates", {
   autoescape: true,
   express: app,
+  watch: true,
 });
 
 app.use(express.static("public"));

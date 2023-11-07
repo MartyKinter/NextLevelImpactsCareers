@@ -1,249 +1,408 @@
-      body {
-          margin: 0;
-          padding: 0;
-          font-family: Arial, sans-serif;
-      }
+/*==================== BASE ====================*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
 
-      h1 {
-          font-size: 400%;
-      }
+h1 {
+    font-size: 400%;
+}
 
-      .top-navbar {
-          background-color: #004b7a;
-          color: white;
-          padding: 10px 5%;
-          display: flex;
-          justify-content: space-between;
-          position: static;
-          width: 90%;
-          z-index: 1000;
-      }
+/*==================== TOP MENU ====================*/
+.top-navbar {
+    background-color: #004b7a;
+    color: white;
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    position: static;
+    width: 90%;
+    z-index: 1000;
+}
 
-      .overlayHeader {
-          background-color: rgba(0, 75, 122, 0.5);
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-      }
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    /* display: flex; */
+}
 
-      .logo {
-          font-size: 24px;
-          font-weight: bold;
-          display: flex;
-          align-items: center;
-      }
+.logo a {
+    text-decoration: none;
+}
 
-      .logo img {
-          margin-right: 10px;
-      }
+.logo img {
+    margin-right: 10px;
+    width: 25px;
+}
 
-      .menu {
-          width: 50%;
-          display: flex;
-          justify-content: space-around;
-          color: white;
-      }
+.menu {
+    width: 50%;
+    /* display: flex; */
+    justify-content: space-around;
+    color: white;
+    position: relative;
+    background: #004b7a;
+    display: none;
+}
 
-      .main-navbar {
-          background-color: #f2f2f2;
-          color: black;
-          padding: 10px 5%;
-          display: flex;
-          justify-content: space-between;
-          position: static;
-          width: 90%;
-          height: 80px;
-          z-index: 1000;
-      }
+.menu ul {
+    margin: 0;
+    margin-top: 1.6em;
+    padding: 0;
+    list-style: none;
+}
 
-      .mainLogo {
-          display: flex;
-          align-items: center;
-      }
+.menu li {
+    text-align: right;
+    margin-bottom: 0.5em;
+    margin-left: 0.5em;
+}
 
-      .mainLogo img {
-          height: 60px;
-          width: auto;
-      }
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    color: #f2f2f2;
+}
 
-      .menuMain {
-          width: 50%;
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-      }
+.menu a:hover {
+    color: #000;
+}
 
-      .menu a {
-          text-decoration: none;
-          font-weight: bold;
-          font-size: 16px;
-          color: #f2f2f2;
-      }
+/****** created styling for responsive dropdown that appears at 848px */
+.nav-toggle {
+    display: none;
+}
 
-      .center {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-      }
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 0.7em;
+    margin-right: 1em;
+}
 
-      .menuMain a {
-          text-decoration: none;
-          font-weight: bold;
-          font-size: 16px;
-          color: #004b7a;
-      }
+/****** when checkbox is checked applys this to all preceeding navs */
+/****** makes the dropdown appear and disappear */
+.nav-toggle:checked~nav {
+    display: block;
+}
 
-      .header {
-          background: url("https://previews.123rf.com/images/chagin/chagin1305/chagin130500400/19729949-happy-business-people-in-a-meeting-at-office.jpg") center/cover no-repeat;
-          height: 400px;
-          position: relative;
-          color: white;
-          text-align: center;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-      }
+@media (min-width: 848px) {
+    nav {
+        border: 0;
+    }
 
-      .overlay {
-          background-color: rgba(0, 75, 122, 0.5);
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-      }
+    .menu ul {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 0;
+    }
 
-      .header-content {
-          z-index: 1;
-          padding: 50px;
-          margin: 50px;
-      }
+    .menu li {
+        margin-left: 20px;
+    }
 
-      .content {
-          background-color: #f2f2f2;
-          padding: 50px;
-          margin: 50px;
-          text-align: left;
-          display: flex;
-          align-items: center;
-      }
+    .menu {
+        display: block;
+    }
 
-      .content img {
-          max-width: 100%;
-          /* Ensure the image doesn't exceed its container */
-          /* margin-right: 20px; */
-          /* Adjust the spacing between image and text */
-      }
+    .nav-toggle-label {
+        display: none;
+        top: -50px;
+        right: -50px;
+    }
 
-      .content-text {
-          flex: 1;
-          /* Allow the text to take remaining space */
-          margin-left: 20px;
-      }
+    .menuMain ul {
+        display: flex;
+        justify-content: flex-end;
+        /* Move the menu items to the right */
+    }
+}
 
-      .content h2 {
-          color: #004b7a;
-      }
+/*==================== MENU MAIN ====================*/
+.main-navbar {
+    background-color: #f2f2f2;
+    color: black;
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    position: static;
+    width: 90%;
+    height: 80px;
+    z-index: 1000;
+}
 
-      .content p {
-          font-size: 18px;
-          color: #230007;
-      }
+.mainLogo {
+    display: flex;
+    align-items: center;
+}
 
-      .content2 {
-          background-color: #004b7a;
-          padding: 50px;
-          margin: 50px;
-          text-align: left;
-          display: flex;
-          align-items: center;
-      }
+.mainLogo img {
+    height: 60px;
+    width: auto;
+}
 
-      .content2 img {
-          max-width: 100%;
-          /* Ensure the image doesn't exceed its container */
-          /* margin-right: 20px;  */
-          /* Adjust the spacing between image and text */
-      }
+.menuMain {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
-      .content2-text {
-          flex: 1;
-          /* Allow the text to take remaining space */
-      }
+/****** changed to ul with diplay flex  */
+.menuMain ul {
+    display: flex;
+    list-style: none;
+    flex-grow: 1;
+}
 
-      .content2 h2 {
-          color: #886f68;
-      }
+.menuMain li {
+    margin-left: 30px;
+}
 
-      .content2 p {
-          font-size: 18px;
-          color: #e6e6e6;
-      }
+.menuMain a:hover {
+    color: #000;
+}
 
-      .headshot {
-          width: 350px;
-          height: 350px;
-      }
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-      .image-container {
-          position: relative;
-          display: inline-block;
-          /* Ensures the container only takes as much space as the image */
-      }
+.menuMain a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    color: #004b7a;
+}
 
-      .overlay {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: rgba(0,
-                  0,
-                  0,
-                  0.7);
-          /* Semi-transparent black overlay */
-          color: white;
-          /* Text color on the overlay */
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          opacity: 0;
-          /* Initially, the overlay is invisible */
-          transition: 0.3s;
-          /* Smooth transition for the overlay effect */
-      }
+/****** at this size the menuMain starts to squish so changed it to a stacked list */
+/****** moved menuMain media queries bellow menuMain base styles because 
+cascade was preventing some from applying correctly */
+@media (max-width: 723px) {
+    .menuMain ul {
+        flex-direction: column;
+    }
 
-      .image-container:hover .overlay {
-          opacity: 1;
-          /* When hovering over the image container, the overlay becomes visible */
-      }
+    .menuMain li {
+        margin-bottom: 3px;
+    }
+}
 
-      /* Additional styles for the overlay text */
-      .overlay-text {
-          text-align: center;
-          font-size: 18px;
-          font-weight: bold;
-          padding: 20px;
-      }
+@media (max-width: 390px) {
+    .menuMain a {
+        font-size: 13px;
+    }
+}
 
-      @media (max-width: 860px) {
-          .content {
-              flex-direction: column;
-              /* Stack elements in a column */
-          }
+/*==================== HEADER ====================*/
+.header {
+    background: url("https://previews.123rf.com/images/chagin/chagin1305/chagin130500400/19729949-happy-business-people-in-a-meeting-at-office.jpg") center/cover no-repeat;
+    height: 400px;
+    position: relative;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-          .image-container {
-              margin-right: 0;
-              /* Remove the margin for small screens */
-          }
-      }
+.overlayHeader {
+    background-color: rgba(0, 75, 122, 0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
 
-      @media (max-width: 860px) {
-          .content2 {
-              flex-direction: column;
-              /* Stack elements in a column */
-          }
-      }
+.header-content {
+    z-index: 1;
+    padding: 50px;
+    margin: 50px;
+}
+
+/*==================== CONTENT ====================*/
+/***** changed margins to % so they shrink better */
+.content {
+    background-color: #f2f2f2;
+    padding: 3.5%;
+    margin: 3.5%;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.content img {
+    max-width: 100%;
+    /* Ensure the image doesn't exceed its container */
+    /* margin-right: 20px;  */
+    /* Adjust the spacing between image and text */
+}
+
+.content-text {
+    flex: 1;
+    margin-left: 20px;
+    /* Allow the text to take remaining space */
+}
+
+.content h2 {
+    color: #004b7a;
+}
+
+.content p {
+    font-size: 18px;
+    color: #230007;
+}
+
+.content2 {
+    background-color: #004b7a;
+    padding: 3.5%;
+    margin: 3.5%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.content2 img {
+    max-width: 100%;
+    /* margin-left: 20px; */
+}
+
+.content2-text {
+    flex: 1;
+    /* margin-right: 20px; */
+}
+
+.content2 h2 {
+    color: #886f68;
+}
+
+.content2 p {
+    font-size: 18px;
+    color: #e6e6e6;
+}
+
+@media (max-width: 860px) {
+    .content {
+        /* flex-direction: column; */
+        /* Stack elements in a column */
+    }
+
+    .content-text {
+        margin-left: 0px;
+    }
+
+    .content2 {
+        flex-direction: column;
+        /* Stack elements in a column */
+    }
+
+    .content2-text {
+        margin-right: 0px;
+    }
+}
+
+/*==================== TESTIMONIAL ====================*/
+.testimonial-carousel {
+    background-color: white;
+    padding: 50px;
+    margin: 50px;
+    text-align: left;
+    overflow: hidden;
+    border: 3px #e6e6e6 solid;
+    text-align: center;
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width */
+}
+
+.testimonials-content {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+    /* Ensure the content takes full width */
+}
+
+.testimonial {
+    flex: 0 0 100%;
+    /* Each testimonial takes full width */
+    color: #004b7a;
+    padding: 0 20px;
+    /* Adjust padding as needed */
+    white-space: normal;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+/*==================== CAREERS ====================*/
+.career-img {
+    width: 150px;
+    height: 150px;
+}
+
+.image-container-career {
+    position: relative;
+    display: inline-block;
+    margin: 1rem 2rem;
+    /* Ensures the container only takes as much space as the image */
+}
+
+.image-container-career:hover .overlay {
+    opacity: 1;
+    /* When hovering over the image container, the overlay becomes visible */
+}
+
+/*==================== TEAM ====================*/
+.headshot {
+    width: 350px;
+    height: 350px;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    /* Ensures the container only takes as much space as the image */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,
+            0,
+            0,
+            0.7);
+    /* Semi-transparent black overlay */
+    color: white;
+    /* Text color on the overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    /* Initially, the overlay is invisible */
+    transition: 0.3s;
+    /* Smooth transition for the overlay effect */
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+    /* When hovering over the image container, the overlay becomes visible */
+}
+
+/* Additional styles for the overlay text */
+.overlay-text {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px;
+}
