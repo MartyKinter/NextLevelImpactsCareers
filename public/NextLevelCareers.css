@@ -76,6 +76,10 @@ h1 {
   display: none;
 }
 
+.nav-toggle-label:hover {
+  cursor: pointer;
+}
+
 .nav-toggle-label {
   position: absolute;
   top: 0;
@@ -231,8 +235,9 @@ cascade was preventing some from applying correctly */
   display: inline-block;
   margin-top: 10px;
   /* Adjust the top margin as needed to create space between text and button */
-  padding: 10px 20px;
-  background-color: transparent;
+  padding: 15px 30px;
+  background-color: #004b7a;
+  /* background-color: transparent; */
   border: 2px solid #f2f2f2;
   color: #f2f2f2;
   border-radius: 25px;
@@ -257,8 +262,17 @@ cascade was preventing some from applying correctly */
   /* justify-content: space-between; */
 }
 
+.content a {
+  text-decoration: none;
+}
+
 .industry-headings {
   margin-left: 3.5%;
+  text-decoration: underline;
+}
+
+.industry-headings:hover {
+  color: black;
 }
 
 .content-images {
@@ -320,10 +334,6 @@ cascade was preventing some from applying correctly */
 }
 
 @media (max-width: 860px) {
-  .content {
-    /* flex-direction: column; */
-    /* Stack elements in a column */
-  }
 
   .content-text {
     margin-left: 0px;
@@ -372,7 +382,7 @@ cascade was preventing some from applying correctly */
 
 /*==================== CAREERS ====================*/
 .career-img {
-  width: 150px;
+  width: 170px;
   height: 150px;
 }
 
@@ -438,4 +448,138 @@ cascade was preventing some from applying correctly */
 
 .text {
   color: white;
+}
+
+/*==================== FOOTER ====================*/
+
+.footer-container {
+  background-color: #004b7a;
+  padding: 3%;
+  display: flex;
+  flex-direction: row;
+  column-gap: 13rem;
+}
+
+.footer-logo {
+  width: 350px;
+}
+
+.footer-industries {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  row-gap: 1rem;
+  color: white;
+  text-align: left;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: row;
+  column-gap: 15rem;
+}
+
+.footer-industries h3 {
+  font-size: larger;
+  font-weight: 600;
+}
+
+.footer-industries p {
+  font-size: small;
+  margin: 0;
+}
+
+.footer-links {
+  padding-top: 7%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  list-style: none;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  align-items: flex-end;
+}
+
+.footer-address {
+  display: flex;
+  flex-direction: column;
+  column-gap: 1rem;
+  align-items: center;
+}
+
+.address {
+  color: white;
+  font-size: small;
+}
+
+.phone {
+  color: white;
+  font-size: small;
+}
+
+.site-map {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-socials {
+  display: flex;
+  padding-left: 1.8rem;
+}
+
+.footer-social-icon {
+  padding: 0 10px;
+}
+
+.footer-link:hover {
+  color: black;
+}
+
+* {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1120px) {
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding-top: 0%;
+  }
+}
+
+@media (max-width: 670px) {
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    list-style: none;
+    padding-left: 0;
+  }
 }
